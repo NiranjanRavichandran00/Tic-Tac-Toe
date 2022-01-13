@@ -65,7 +65,7 @@ function App() {
   
   return (
     <div className="App">
-      <label>Player {(turn === 'O') ? "2's" : "1's"} Turn</label>
+      <label>Player {(turn === 'O') ? "2's (X)" : "1's (O)"} Turn</label>
       <PlayerBoard
        board = {board}
        setBox = {setBox}
