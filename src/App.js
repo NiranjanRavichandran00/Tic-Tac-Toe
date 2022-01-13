@@ -85,6 +85,7 @@ function App() {
        setBox = {setBox}
        checkBoard= {checkBoard}
       />  
+     
       <FaUndoAlt 
         type= "button"
         size = {42}
@@ -92,6 +93,7 @@ function App() {
       />    
       <label className="gameResult">{win}</label>
     </div>
+ 
   );
 }
 
