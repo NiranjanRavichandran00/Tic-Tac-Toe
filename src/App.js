@@ -1,6 +1,7 @@
-import PlayerBoard from "./PlayerBoard";
-import {FaUndoAlt} from "react-icons/fa";
+import PlayerBoard from "./components/PlayerBoard";
 import { useState } from "react";
+import {FaUndoAlt} from "react-icons/fa";
+import Header from "./components/Header";
 
 function App() {
 
@@ -71,21 +72,15 @@ function App() {
   
   return (
     <div className="App">
-      {(lockBoard === true) ? 
-        <label>Game Over!</label> 
-        : 
-        <label>{(turn === 'O') ? 
-          "Player 2's (X)" 
-          : 
-          "Player 1's (O)" } 
-      Turn</label>}
-
+      <Header
+        lockBoard={lockBoard}
+        turn = {turn}
+      />
       <PlayerBoard
        board = {board}
        setBox = {setBox}
        checkBoard= {checkBoard}
       />  
-     
       <FaUndoAlt 
         type= "button"
         size = {42}
@@ -93,7 +88,6 @@ function App() {
       />    
       <label className="gameResult">{win}</label>
     </div>
- 
   );
 }
 
