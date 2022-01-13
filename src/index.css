@@ -1,9 +1,9 @@
 
 .App {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  position: relative;
 }
 
 body {
@@ -12,10 +12,7 @@ body {
 }
 
 .PlayerBoard {
-  position: absolute;
-  right: 35%;
-  top: 15vh;
-  margin: auto;
+
   display: inline-grid;
   grid-template-columns: auto auto auto;
   background-color: #2196F3;
@@ -31,7 +28,5 @@ body {
 }
 
 .FaUndoAlt {
-  position: absolute;
-  right: 0;
-  top: 20vh;
+  order:1;
 }
